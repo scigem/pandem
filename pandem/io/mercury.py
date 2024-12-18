@@ -1,7 +1,9 @@
-# import os
-import sys
 import numpy
 import csv
+import pandem.io.utils as utils
+
+metadata_fields = ["N", "Time", "XMin", "YMin", "ZMin", "XMax", "YMax", "ZMax"]
+data_fields = ["x", "y", "z", "vx", "vy", "vz", "radius", "q1", "q2", "q3", "ox", "oy", "oz", "species"]
 
 
 def load(filename):
@@ -49,12 +51,17 @@ def load(filename):
                 particle = i % (nparticles + 1) - 1
                 data[frame, particle, :] = [float(x) for x in row]
 
-    return data, metadata
+    return data, data_fields, metadata
 
 
-def save(data, metadata, filename):
+def save(data, headers, metadata, filename):
     with open(filename, "w") as f:
-        for i, frame in enumerate(data):
+        data = utils.get_correct_data(data, headers, data_fields)
+
+        for i in range(data.shape[0]):
+            frame = data[i]
+            metadata[i] = utils.get_correct_metadata(metadata[i], metadata_fields)
+
             f.write(
                 f"{metadata[i]['N']} {metadata[i]['Time']} {metadata[i]['XMin']} {metadata[i]['YMin']} {metadata[i]['ZMin']} {metadata[i]['XMax']} {metadata[i]['YMax']} {metadata[i]['ZMax']}\n"
             )
@@ -65,7 +72,7 @@ def save(data, metadata, filename):
 
 
 if __name__ == "__main__":
-    print(sys.argv)
+    import sys
+
     data, metadata = load(sys.argv[1])
-    print(data)
     save(data, metadata, sys.argv[2])

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pandem"
-version = "0.1.2"
+version = "0.2"
 authors = [
     {name = "Benjy Marks", email = "benjy.marks@sydney.edu.au"},
     {name = "François Guillard", email = "francois.guillard@sydney.edu.au"}
@@ -26,7 +26,7 @@ classifiers = [
 keywords = ["discrete element method", "DEM", "granular materials"]
 
 [project.scripts]
-pandem = "pandem.convert:script"
+pandem = "pandem.pipeline:conversion_script"
 
 [project.urls]
 Documentation = "https://github.com/scigem/pandem/docs/index.html"
