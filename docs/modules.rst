@@ -1,15 +1,10 @@
-.. _io:
+.. _pandem:
 
-IO
+PanDEM
 ==========================
 
-.. automodule:: pandem.io
-  :members:
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
 
-.. _pipeline:
-
-Pipeline
-==========================
-
-.. automodule:: pandem.pipeline
-  :members:
+   pandem

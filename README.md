@@ -22,7 +22,8 @@ We support the following file formats:
  <!-- - `.bz2` ([YADE](https://yade-dem.org/doc/introduction.html#saving-and-loading)) -->
  - `.data` ([MercuryDPM](https://mercurydpm.org/))
  <!-- - `.vtk` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html)) -->
- - `.csv` ([NDDEM])(https://github.com/franzzzzzzzz/NDDEM/)
+ - `.csv` ([NDDEM](https://github.com/franzzzzzzzz/NDDEM/))
+ - `.dump` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html))
 
 ## Documentation
 

@@ -5,7 +5,7 @@ def load(filename):
     return None
 
 
-def save(data, metadata, filename):
+def save(data, headers, metadata, filename):
     pass
 
 

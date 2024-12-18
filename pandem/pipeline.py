@@ -26,6 +26,8 @@ def guess_type(filename):
         return "nddem"
     elif extension == "bz2" or extension == "gz":
         return "yade"
+    elif extension == "dump":
+        return "liggghts"
     else:
         None
 

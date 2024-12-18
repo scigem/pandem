@@ -1,5 +1,13 @@
 import numpy
 
+synonyms = [
+    ["Timestep", "Time"],
+    ["N", "NParticles"],
+    ["ox", "omegax"],
+    ["oy", "omegay"],
+    ["oz", "omegaz"],
+]
+
 
 def get_correct_metadata(metadata, required_fields):
     """
@@ -14,6 +22,13 @@ def get_correct_metadata(metadata, required_fields):
     dict: The updated metadata dictionary.
     """
     for field in required_fields:
+        if field not in metadata:
+            for syn in synonyms:
+                if field in syn:
+                    for s in syn:
+                        if s in metadata:
+                            metadata[field] = metadata[s]
+                            break
         if field not in metadata:
             metadata[field] = numpy.nan
 
