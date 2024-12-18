@@ -4,10 +4,16 @@
 [Documentation here](https://scigem.github.io/pandem/), or compile it yourself following the details below.
 
 ## Installation
-This package can then be installed via `pip install pandem`. If installing from github, try cloning and then running:
+This package can then be installed via 
+```
+pip install pandem
+```
+
+If installing from github, try cloning and then running:
 ```
 pip install -e .
 ```
+
 If you make any changes to the source code, re-run those two lines to have your changes reflected in your installed package.
 
 ## Usage
