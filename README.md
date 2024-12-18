@@ -4,7 +4,7 @@
 [Documentation here](https://scigem.github.io/pandem/), or compile it yourself following the details below.
 
 ## Installation
-This package can then be installed via 
+This package can be installed via 
 ```
 pip install pandem
 ```
@@ -14,11 +14,9 @@ If installing from github, try cloning and then running:
 pip install -e .
 ```
 
-If you make any changes to the source code, re-run those two lines to have your changes reflected in your installed package.
-
 ## Usage
 
-If you are interested in converting a dataset from one DEM file format to antoher, you can use the installed script `pandem`, like so:
+To convert a dataset from one DEM file format to antoher, at the command line type:
 
 ```
 pandem <path_to_source_file> <path_to_output_file>
@@ -30,6 +28,8 @@ We support the following file formats:
  - `.dump` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html))
  <!-- - `.bz2` ([YADE](https://yade-dem.org/doc/introduction.html#saving-and-loading)) -->
  <!-- - `.vtk` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html)) -->
+
+Try `pandem --help` for more options.
 
 ## Contributing
 
