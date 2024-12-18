@@ -19,11 +19,15 @@ pandem <path_to_source_file> <path_to_output_file>
 ```
 
 We support the following file formats:
- <!-- - `.bz2` ([YADE](https://yade-dem.org/doc/introduction.html#saving-and-loading)) -->
  - `.data` ([MercuryDPM](https://mercurydpm.org/))
- <!-- - `.vtk` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html)) -->
  - `.csv` ([NDDEM](https://github.com/franzzzzzzzz/NDDEM/))
  - `.dump` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html))
+ <!-- - `.bz2` ([YADE](https://yade-dem.org/doc/introduction.html#saving-and-loading)) -->
+ <!-- - `.vtk` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html)) -->
+
+## Contributing
+
+Something not working? Want to add your own file formats? Please consider making a pull request with changes. Otherwise please use the Issues tracker above.
 
 ## Documentation
 
