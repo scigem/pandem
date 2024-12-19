@@ -6,7 +6,9 @@ synonyms = [
     ["ox", "omegax"],
     ["oy", "omegay"],
     ["oz", "omegaz"],
+    ["R", "radius", "RadiusProjected"],
 ]
+
 
 
 def get_correct_metadata(metadata, required_fields):
@@ -50,10 +52,15 @@ def get_correct_data(data, headers_in, headers_out):
                    headers_out is not found in headers_in, the corresponding channel in the output
                    data will be filled with NaNs.
     """
-    data_out = numpy.zeros((data.shape[0], data.shape[1], len(headers_out)))
+    data_out = numpy.nan*numpy.ones((data.shape[0], data.shape[1], len(headers_out)))
     for i, header in enumerate(headers_out):
         if header in headers_in:
             data_out[:, :, i] = data[:, :, headers_in.index(header)]
         else:
-            data_out[:, :, i] = numpy.nan
+            for syn in synonyms:
+                if header in syn:
+                    for s in syn:
+                        if s in headers_in:
+                            data_out[:, :, i] = data[:, :, headers_in.index(s)]
+                            break
     return data_out

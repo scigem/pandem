@@ -2,7 +2,7 @@ import os
 import argparse
 import pandem.io
 
-known_input_types = ["mercury", "nddem", "yade", "liggghts"]
+known_input_types = ["mercury", "nddem", "nddem_vtk", "yade", "liggghts"]
 
 
 def guess_type(filename):
@@ -24,6 +24,8 @@ def guess_type(filename):
         return "mercury"
     elif extension == "csv":
         return "nddem"
+    elif extension == "vtk":
+        return "nddem_vtk"
     elif extension == "bz2" or extension == "gz":
         return "yade"
     elif extension == "dump":

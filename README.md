@@ -24,7 +24,7 @@ pandem <path_to_source_file> <path_to_output_file>
 
 We support the following file formats:
  - `.data` ([MercuryDPM](https://mercurydpm.org/))
- - `.csv` ([NDDEM](https://github.com/franzzzzzzzz/NDDEM/))
+ - `.csv` or `.vtk` ([NDDEM](https://github.com/franzzzzzzzz/NDDEM/))
  - `.dump` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html))
  <!-- - `.bz2` ([YADE](https://yade-dem.org/doc/introduction.html#saving-and-loading)) -->
  <!-- - `.vtk` ([LIGGGHTS](https://www.cfdem.com/media/DEM/docu/liggghts.html)) -->

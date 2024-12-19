@@ -25,7 +25,7 @@ def save(data, headers, metadata, filename):
         frame = data[i]
 
         numpy.savetxt(
-            f"{filename}_{i}.csv",
+            f"{filename}_{i:06d}.csv",
             frame,
             delimiter=",",
             header="x0,x1,x2,R,PBCFlags,Vmag,Omegamag",
